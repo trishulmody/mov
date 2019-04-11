@@ -1,1 +1,1 @@
-web: java -jar target/mov-0.0.2-SNAPSHOT.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/mov-0.0.2-SNAPSHOT.jar
