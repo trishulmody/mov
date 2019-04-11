@@ -10,11 +10,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.scheduling.annotation.Scheduled;
 
 import java.io.IOException;
 
 public class Bms
 {
+    @Scheduled(fixedDelayString = "${CRON_INTERVAL}")
     public static void book() throws IOException, InterruptedException, JSONException
     {
         Document doc = Jsoup.connect("https://in.bookmyshow.com/buytickets/inox-inorbit-mall-malad-w/cinema-mumbai-FMMA-MT/20190425").get();
