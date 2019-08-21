@@ -45,5 +45,4 @@ public class MovApplication implements CommandLineRunner
             LOG.info("args[{}]: {}", i, args[i]);
         }
     }
-    //comment
 }

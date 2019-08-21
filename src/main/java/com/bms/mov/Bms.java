@@ -44,7 +44,7 @@ public class Bms
     private static void sendFlockMsg(JSONObject json, CloseableHttpClient httpClient) throws IOException
     {
         try {
-            HttpPost request = new HttpPost("https://api.flock.com/hooks/sendMessage/ac38145e-845f-4f25-b852-9d23d10245b0");
+            HttpPost request = new HttpPost();
             StringEntity params = new StringEntity(json.toString());
             request.addHeader("content-type", "application/json");
             request.setEntity(params);
